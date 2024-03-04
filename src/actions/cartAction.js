@@ -19,7 +19,7 @@ import axios from "axios";
  * ADD ITEM ACTION 
 \*---------------------*/
 export const addItemsToCart = (id, quantity) => async (dispatch, getState) => {
-    const { data } = await axios.get(`/api/v1/product/${id}`);
+    const { data } = await axios.get(`${REACT_APP_SERVER_URL}/api/v1/product/${id}`);
 
     dispatch({
         type: ADD_TO_CART,
