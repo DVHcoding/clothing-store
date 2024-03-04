@@ -75,7 +75,7 @@ const ConfirmOrder = () => {
             };
 
             // ###################
-            const response = await axios.post(`${REACT_APP_SERVER_URL}/api/v1/stripe/create-checkout-session`, {
+            const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/v1/stripe/create-checkout-session`, {
                 cartItems,
                 orderInfo,
                 userId: user._id,
