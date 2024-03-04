@@ -29,7 +29,7 @@ const Profile = () => {
 
     return (
         <Fragment>
-            {loading ? (
+            {loading || !user ? (
                 <Loader />
             ) : (
                 <Fragment>
