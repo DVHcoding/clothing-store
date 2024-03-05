@@ -111,7 +111,6 @@ const UpdateProduct = () => {
 
 
 
-
     // ########################
     const updateProductSubmitHandler = async (e) => {
         e.preventDefault();
@@ -123,6 +122,7 @@ const UpdateProduct = () => {
             category,
             Stock,
         };
+
 
         // ##########################
         try {
@@ -154,11 +154,9 @@ const UpdateProduct = () => {
                     config
                 );
 
-                const { public_id, url } = cloudinaryResponse.data;
+                console.log(cloudinaryResponse.data);
 
-                console.log(cloudinaryResponse);
-                console.log(public_id);
-                console.log(url);
+                const { public_id, url } = cloudinaryResponse.data;
 
                 uploadedImagesData.push({
                     public_id: public_id,
@@ -203,8 +201,6 @@ const UpdateProduct = () => {
     };
 
 
-
-    // ########################
     return (
         <Fragment>
             {loading || loadingUpload ? (<Loader />) : (
