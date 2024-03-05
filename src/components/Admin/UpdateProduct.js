@@ -63,13 +63,18 @@ const UpdateProduct = () => {
 
     // ########################
     const categories = [
-        "Laptop",
-        "Footwear",
-        "Bottom",
-        "Tops",
-        "Attire",
-        "Camera",
-        "SmartPhones",
+        "Áo sơ mi",
+        "Áo dáng peplum",
+        "Áo thun len",
+        "Áo vest/blazer",
+        "Set bộ công sở",
+        "Quần dài",
+        "Quần jeans",
+        "Chân váy bút chì",
+        "Chân váy chữ A",
+        "Chân váy jeans",
+        "Đầm công sở",
+        "Phụ kiện",
     ];
 
 
@@ -221,7 +226,7 @@ const UpdateProduct = () => {
                                 encType="multipart/form-data"
                                 onSubmit={updateProductSubmitHandler}
                             >
-                                <h1>Create Product</h1>
+                                <h1>Update Product</h1>
 
                                 <div>
                                     <SpellcheckIcon />
