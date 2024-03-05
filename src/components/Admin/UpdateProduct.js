@@ -128,7 +128,10 @@ const UpdateProduct = () => {
         try {
             setLoadingUpload(true);
 
-            const config = { headers: { "Content-Type": "multipart/form-data" } };
+            const config = {
+                headers: { "Content-Type": "multipart/form-data" },
+                withCredentials: true,
+            };
 
 
             // ##########################
