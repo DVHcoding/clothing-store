@@ -10,8 +10,7 @@ import "./About.css";
 import { Button, Typography, Avatar } from "@material-ui/core";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import FacebookIcon from "@material-ui/icons/Facebook";
-
-
+import AvatarImage from "../../../images/avatar.jpg";
 
 // #########################
 const About = () => {
@@ -32,7 +31,7 @@ const About = () => {
                     <div>
                         <Avatar
                             style={{ width: "10vmax", height: "10vmax", margin: "2vmax 0" }}
-                            src="https://scontent.fhan7-1.fna.fbcdn.net/v/t39.30808-6/244973891_417649256379152_4439076445066100352_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=rHW_2__-uzEAX-OqxUR&_nc_ht=scontent.fhan7-1.fna&oh=00_AfB02GjBmedY2ed01S40-fJQExWDxzysUhXX4eq3XVFuOg&oe=65DCDBFF"
+                            src={AvatarImage}
                             alt="Founder"
                         />
                         <Typography>DVHcoding</Typography>
