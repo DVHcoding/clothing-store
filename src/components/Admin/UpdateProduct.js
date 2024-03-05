@@ -156,6 +156,10 @@ const UpdateProduct = () => {
 
                 const { public_id, url } = cloudinaryResponse.data;
 
+                console.log(cloudinaryResponse);
+                console.log(public_id);
+                console.log(url);
+
                 uploadedImagesData.push({
                     public_id: public_id,
                     url: url,
