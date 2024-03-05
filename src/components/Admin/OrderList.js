@@ -153,7 +153,7 @@ const OrderList = () => {
 
             <div className="dashboard">
                 <SideBar />
-                <div className="productListContainer">
+                <div className="productListContainer" style={{ overflow: "hidden" }}>
                     <h1 id="productListHeading">ALL ORDERS</h1>
 
                     <DataGrid

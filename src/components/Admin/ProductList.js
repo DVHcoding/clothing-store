@@ -133,7 +133,7 @@ const ProductList = () => {
 
                     <div className="dashboard">
                         <SideBar />
-                        <div className="productListContainer">
+                        <div className="productListContainer" style={{ overflow: "hidden" }}>
                             <h1 id="productListHeading">ALL PRODUCTS</h1>
 
                             <DataGrid

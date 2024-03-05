@@ -148,7 +148,7 @@ const UsersList = () => {
                 <SideBar />
 
                 {loading ? (<Loader />) : (
-                    <div className="productListContainer">
+                    <div className="productListContainer" style={{ overflow: "hidden" }}>
                         <h1 id="productListHeading">ALL USERS</h1>
 
                         <DataGrid
