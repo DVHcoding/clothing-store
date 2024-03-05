@@ -121,7 +121,9 @@ const UpdateProduct = () => {
             description,
             category,
             Stock,
+            images,
         };
+
 
 
         // ##########################
@@ -129,8 +131,10 @@ const UpdateProduct = () => {
             setLoadingUpload(true);
 
             const config = {
-                headers: { "Content-Type": "multipart/form-data" },
-                withCredentials: true,
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                },
+                withCredentials: false
             };
 
 
@@ -154,9 +158,9 @@ const UpdateProduct = () => {
                     config
                 );
 
-                console.log(cloudinaryResponse.data);
-
                 const { public_id, url } = cloudinaryResponse.data;
+
+                console.log(public_id);
 
                 uploadedImagesData.push({
                     public_id: public_id,
@@ -166,6 +170,8 @@ const UpdateProduct = () => {
 
             // ##########################
             productFields.images = uploadedImagesData;
+
+            console.log(productFields)
 
             setLoadingUpload(false);
 

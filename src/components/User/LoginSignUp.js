@@ -72,7 +72,12 @@ const LoginSignUp = () => {
         try {
             setUploading(true);
 
-            const config = { headers: { "Content-Type": "multipart/form-data" } };
+            const config = {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                },
+                withCredentials: false
+            };
 
             const cloudinaryResponse = await axios.post(`https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_NAME}/image/upload`, myForm, config);
 
