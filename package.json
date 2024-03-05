@@ -23,6 +23,7 @@
     "chart.js": "^4.4.2",
     "cloudinary-react": "^1.8.1",
     "country-state-city": "^3.2.1",
+    "js-cookie": "^3.0.5",
     "overlay-navbar": "^1.2.3",
     "react": "^18.2.0",
     "react-alert": "^7.0.3",
@@ -65,5 +66,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://clothing-server-production.up.railway.app"
+  "proxy": "http://localhost:4000"
 }

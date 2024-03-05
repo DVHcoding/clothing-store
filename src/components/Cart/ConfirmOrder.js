@@ -20,7 +20,7 @@ import { Typography } from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useAlert } from "react-alert";
-
+axios.defaults.withCredentials = true;
 
 
 const ConfirmOrder = () => {

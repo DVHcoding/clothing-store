@@ -23,7 +23,7 @@ import SpellcheckIcon from "@material-ui/icons/Spellcheck";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
+axios.defaults.withCredentials = true;
 
 const NewProduct = () => {
 

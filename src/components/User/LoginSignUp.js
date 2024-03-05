@@ -20,7 +20,7 @@ import { useAlert } from "react-alert";
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import axios from 'axios';
-
+axios.defaults.withCredentials = true;
 
 
 const LoginSignUp = () => {

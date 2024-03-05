@@ -57,6 +57,7 @@ const Dashboard = () => {
 
     const { users } = useSelector((state) => state.allUsers);
 
+
     let outOfStock = 0;
 
     let inStock = 0;
@@ -76,6 +77,7 @@ const Dashboard = () => {
         dispatch(getAllOrders());
         dispatch(getAllUsers());
     }, [dispatch]);
+
 
     let totalAmount = 0;
 

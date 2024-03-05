@@ -57,7 +57,11 @@ import {
 * IMPORT Npm
 \*---------------------*/
 import axios from "axios";
+const instance = axios.create({
+    baseURL: 'https://learnlangs.online'
+});
 
+instance.defaults.withCredentials = true;
 
 
 /*---------------------*\
@@ -119,7 +123,7 @@ export const loadUser = () => async (dispatch) => {
     try {
         dispatch({ type: LOAD_USER_REQUEST });
 
-        const { data } = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/v1/me`);
+        const { data } = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/v1/me`, { withCredentials: true });
 
         dispatch({ type: LOAD_USER_SUCCESS, payload: data.user });
 
