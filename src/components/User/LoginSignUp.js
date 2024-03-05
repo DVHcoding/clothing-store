@@ -58,7 +58,6 @@ const LoginSignUp = () => {
         dispatch(login(loginEmail, loginPassword));
     };
 
-
     // ##################
     const registerSubmit = async (e) => {
         e.preventDefault();
@@ -72,19 +71,24 @@ const LoginSignUp = () => {
         try {
             setUploading(true);
 
-            const config = {
-                headers: {
-                    "Content-Type": "multipart/form-data",
-                },
-                withCredentials: false
-            };
+            if (!avatar) {
+                user.public_id = "NaN";
+                user.url = "/Profile.png";
+            } else {
+                const config = {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                    withCredentials: false
+                };
 
-            const cloudinaryResponse = await axios.post(`https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_NAME}/image/upload`, myForm, config);
+                const cloudinaryResponse = await axios.post(`https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_NAME}/image/upload`, myForm, config);
 
-            const { public_id, url } = cloudinaryResponse.data;
+                const { public_id, url } = cloudinaryResponse.data;
 
-            user.public_id = public_id;
-            user.url = url;
+                user.public_id = public_id;
+                user.url = url;
+            }
 
             setUploading(false);
         } catch (error) {
@@ -94,11 +98,13 @@ const LoginSignUp = () => {
         dispatch(register(user));
     };
 
+
     // ##################
     const registerDataChange = async (e) => {
         if (e.target.name === "avatar") {
             if (e.target.files.length === 0) {
                 setAvatarPreview("/Profile.png");
+                setAvatar(null);
                 return;
             }
 
